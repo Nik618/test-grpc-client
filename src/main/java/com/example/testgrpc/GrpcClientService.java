@@ -56,7 +56,7 @@ public class GrpcClientService {
                 .build();
         UserOuterClass.UpdateUserResponse response = stub.updateUser(request);
 
-        System.out.println("Created user: " + response);
+        System.out.println("Updated user: " + response);
     }
 
     private static void getUser(UserServiceGrpc.UserServiceBlockingStub stub, Integer id) {
@@ -65,7 +65,7 @@ public class GrpcClientService {
                 .build();
         UserOuterClass.GetUserResponse response = stub.getUser(request);
 
-        System.out.println("Get user: " + response);
+        System.out.println("Got user: " + response);
     }
 
     private static void deleteUser(UserServiceGrpc.UserServiceBlockingStub stub, Integer id) {
@@ -74,7 +74,7 @@ public class GrpcClientService {
                 .build();
         UserOuterClass.DeleteUserResponse response = stub.deleteUser(request);
 
-        System.out.println("Get user: " + response);
+        System.out.println("Deleted user: " + response);
     }
 
 }
